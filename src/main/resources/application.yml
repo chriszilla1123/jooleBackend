@@ -1,0 +1,26 @@
+spring:
+   datasource:
+      driver-class-name: com.mysql.jdbc.Driver
+      username: root
+      password: password
+      url: jdbc:mysql://localhost:3306/joole
+   jpa:
+      show-sql: true
+      hibernate:
+         naming:
+            implicit-strategy: org.hibernate.boot.model.naming.ImplicitNamingStrategyLegacyJpaImpl
+            physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+      
+server:
+   servlet:
+      context-path: /joole
+     
+logging:
+   level:
+      org:
+         hibernate:
+            SQL: DEBUG
+            type: TRACE
+            
+jwt:
+   secret: mysecret
